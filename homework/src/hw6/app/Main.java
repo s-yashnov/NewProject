@@ -1,4 +1,4 @@
-package hw6;
+package hw6.app;
 
 import java.util.Scanner;
 
