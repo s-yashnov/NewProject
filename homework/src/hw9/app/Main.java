@@ -24,10 +24,12 @@ public class Main {
     public static void main(String[] args) {
         createArray(ARR);
         printArray(ARR);
+        System.out.println();
         sumPairRow(ARR);
         sumNoPairRow(ARR);
         multiplyPairRow(ARR);
         multiplyNoPairRow(ARR);
+        System.out.println();
         printMagicMatrixResult(ARR);
     }
 
@@ -142,7 +144,6 @@ public class Main {
     }
 
     public static void printMagicMatrixResult(int[][] arr) {
-
         if (checkMagicMatrix(arr)) {
             System.out.println("Матриця є магічним квадратом.");
         } else {
