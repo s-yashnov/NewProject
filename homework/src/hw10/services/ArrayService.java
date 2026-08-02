@@ -5,8 +5,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class ArrayService {
-    private static Scanner s = new Scanner(System.in);
-    private static Random rand = new Random();
+    private static final Scanner s = new Scanner(System.in);
+    private static final Random rand = new Random();
 
     public static int sumArray(int[] arr) {
         int result = 0;
@@ -19,19 +19,34 @@ public class ArrayService {
     }
 
     public static void fillArray(int[] arr) {
-
-        System.out.println("Введіть діапазон значень якими буде заповнено масив");
-        System.out.print("Введіть нижню межу значень: ");
-        int firstValue = Integer.parseInt(String.valueOf(s.nextInt()));
-        System.out.print("Введіть верхню межу значень: ");
-        int secondValue = Integer.parseInt(String.valueOf(s.nextInt()));
-        ;
-
+        System.out.println("Введіть діапазон значень, якими буде заповнено масив.");
+        int firstValue;
+        while (true) {
+            System.out.print("Введіть нижню межу значень: ");
+            if (!s.hasNextInt()) {
+                System.out.println("ПОМИЛКА!!! Ви ввели не число.");
+                s.next();
+                continue;
+            }
+            firstValue = s.nextInt();
+            break;
+        }
+        int secondValue;
+        while (true) {
+            System.out.print("Введіть верхню межу значень: ");
+            if (!s.hasNextInt()) {
+                System.out.println("ПОМИЛКА!!! Ви ввели не число.");
+                s.next();
+                continue;
+            }
+            secondValue = s.nextInt();
+            break;
+        }
         if (firstValue > secondValue) {
             System.out.println("ПОМИЛКА!!! Нижня межа більша за верхню!");
         } else {
             for (int i = 0; i < arr.length; i++) {
-                arr[i] = rand.nextInt(firstValue, secondValue);
+                arr[i] = rand.nextInt(firstValue, secondValue + 1);
             }
         }
     }

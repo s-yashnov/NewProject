@@ -29,8 +29,7 @@ public class MathService {
      */
 
     public static double cylinderVolume(double rad, double height){
-        double result = Math.PI * (rad * rad) * height;
-        return result;
+        return Math.PI * (rad * rad) * height;
     }
 
     /*
@@ -38,15 +37,12 @@ public class MathService {
     Введіть b: 3
     Результат 2^3 дорівнює 8.
      */
-    public static int pow (int a, int b){
+    public static int pow(int a, int b) {
         int result = 1;
-        for (int i = 0; i < a; i++) {
-            result *= b;
+        for (int i = 0; i < b; i++) {
+            result *= a;
         }
         return result;
     }
 
-    public static void print(){
-        System.out.println(pow(a, b));
-    }
 }
