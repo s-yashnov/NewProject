@@ -26,8 +26,4 @@ public class Rectangle implements Square{
         }
         return area;
     }
-    @Override
-    public String toString() {
-        return "Rectangle{" + "a=" + a + ", b=" + b + '}';
-    }
 }

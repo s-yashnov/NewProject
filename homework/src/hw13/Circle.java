@@ -24,10 +24,4 @@ public class Circle implements Square{
         }
         return area;
     }
-    @Override
-    public String toString() {
-        return "Circle{" +
-                "radius=" + radius +
-                '}';
-    }
 }
