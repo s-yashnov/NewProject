@@ -19,9 +19,7 @@ public class Main {
                 new Circle(5),
                 new Triangle(5, 5, 8)
         };
-
         printTotalSquare(shapes);
-
     }
 
     public static void printTotalSquare(Square[] shapes) {
