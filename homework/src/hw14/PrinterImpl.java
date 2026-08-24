@@ -1,7 +1,6 @@
 package hw14;
 
 public class PrinterImpl implements Printer{
-
     public static class Message {
         private String text;
         private String sender;
