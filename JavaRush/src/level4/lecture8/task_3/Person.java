@@ -7,4 +7,22 @@ public interface Person {
         }
     }
 
+    class Looser implements Person {
+        void doNoting(){
+            System.out.println("I usually do nothing.");
+        }
+    }
+
+    class Coder implements Person {
+        void writeCode() {
+            System.out.println("I usually write code.");
+        }
+    }
+
+    class Proger implements Person {
+        void enjoy() {
+            System.out.println("It`s a wonderful life!");
+        }
+    }
+
 }
