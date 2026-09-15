@@ -7,8 +7,8 @@ public interface Person {
         }
     }
 
-    class Looser implements Person {
-        void doNoting(){
+    class Loser implements Person {
+        void doNothing() {
             System.out.println("I usually do nothing.");
         }
     }
@@ -21,8 +21,7 @@ public interface Person {
 
     class Proger implements Person {
         void enjoy() {
-            System.out.println("It`s a wonderful life!");
+            System.out.println("It's a wonderful life!");
         }
     }
-
 }
